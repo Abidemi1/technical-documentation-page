@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>Jquery Documentation</header>
+      <ul>
+        <li><a class="nav-link" href="#what_is_jquery">What Is JQuery</a></li>
+        <li>
+          <a class="nav-link" href="#before_getting_started"
+            >Before Getting Started</a
+          >
+        </li>
+        <li><a class="nav-link" href="#things_to_know">Things To Know</a></li>
+        <li><a class="nav-link" href="#syntax">Syntax</a></li>
+        <li><a class="nav-link" href="#selector">Selector</a></li>
+        <li><a class="nav-link" href="#events">Events</a></li>
+        <li>
+          <a class="nav-link" href="#effects">Effects</a>
+          <ul>
+            <li><a class="nav-link" href="#hide_&_show">Hide & Show</a></li>
+            <li><a class="nav-link" href="#fade">Fade</a></li>
+            <li><a class="nav-link" href="#slide">Slide</a></li>
+            <li><a class="nav-link" href="#animate">Animate</a></li>
+            <li><a class="nav-link" href="#stop">Stop</a></li>
+            <li><a class="nav-link" href="#callback">Callback</a></li>
+            <li><a class="nav-link" href="#chaining">Chaining</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="what_is_jquery">
+        <header>What is Jquery</header>
+        <article>
+          <p>jQuery is a fast, small, and feature-rich JavaScript library.</p>
+          <p>
+            It makes things like HTML document traversal and manipulation, event
+            handling, animation, and Ajax much simpler with an easy-to-use API
+            that works across a multitude of browsers.
+          </p>
+          <p>
+            With a combination of versatility and extensibility, jQuery has
+            changed the way that millions of people write JavaScript.
+          </p>
+        </article>
+      </section>
+
+      <section class="main-section" id="before_getting_started">
+        <header>Before Getting Started</header>
+        <article>
+          <p>
+            Before you start studying jQuery, you should have a basic knowledge
+            of:
+          </p>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="main-section" id="things_to_know">
+        <header>Things To Know</header>
+        <article>
+          <p>
+            There are several ways to start using jQuery on your web site. You
+            can:
+          </p>
+          <ul>
+            <li>Download the jQuery library from jQuery.com</li>
+            <li>Include jQuery from a CDN</li>
+          </ul>
+          <p>
+            The jQuery library is a single JavaScript file, and you reference it
+            with the HTML <span class="blue">&lt;script&gt;</span>tag inside the
+            <span class="blue">&lt;head&gt;</span> section:
+          </p>
+          <div class="box">
+            <code class="highlight"
+              >&lt;head&gt; &lt;script
+              src=&quot;jquery-3.5.1.min.js&quot;&gt;&lt;/script&gt;
+              &lt;/head&gt;</code
+            >
+            <br />
+            <code class="highlight"
+              >&lt;head&gt; &lt;script
+              src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+              &lt;/head&gt;</code
+            >
+          </div>
+        </article>
+      </section>
+
+      <section class="main-section" id="syntax">
+        <header>Syntax</header>
+        <article>
+          <p>
+            With jQuery you select (query) HTML elements and perform "actions"
+            on them.
+          </p>
+          <p>
+            The jQuery syntax is tailor-made for selecting HTML elements and
+            performing some action on the element(s).
+          </p>
+          <p>Basic syntax is: $(selector).action()</p>
+
+          <ul>
+            <li>A $ sign to define/access jQuery</li>
+            <li>A (selector) to &quot;query (or find)&quot; HTML elements</li>
+            <li>A jQuery action() to be performed on the element(s)</li>
+          </ul>
+          <div class="box">
+            <code class="highlight"
+              >$(document).ready(function(){ // jQuery methods go here...
+              });</code
+            >
+          </div>
+        </article>
+      </section>
+
+      <section class="main-section" id="selector">
+        <header>Selector</header>
+        <article>
+          <p>
+            jQuery selectors are one of the most important parts of the jQuery
+            library.
+          </p>
+          <p>
+            jQuery selectors allow you to select and manipulate HTML element(s).
+          </p>
+          <p>
+            jQuery selectors are used to "find" (or select) HTML elements based
+            on their name, id, classes, types, attributes, values of attributes
+            and much more. It's based on the existing CSS Selectors, and in
+            addition, it has some own custom selectors.
+          </p>
+          <p>
+            All selectors in jQuery start with the dollar sign and parentheses:
+            $().
+          </p>
+          <p>
+            The jQuery element selector selects elements based on the element
+            name.
+          </p>
+          <p>You can select all &lt;p&gt; elements on a page like this:</p>
+          <div class="box">
+            <code class="highlight">$(&quot;p&quot;)</code>
+          </div>
+        </article>
+      </section>
+
+      <section class="main-section" id="events">
+        <header>Events</header>
+        <article>
+          <p>jQuery is tailor-made to respond to events in an HTML page.</p>
+          <p>
+            All the different visitors' actions that a web page can respond to
+            are called events.
+          </p>
+          <p>An event represents the precise moment when something happens.</p>
+          <ul>
+            <li>moving a mouse over an element</li>
+            <li>selecting a radio button</li>
+            <li>clicking on an element</li>
+          </ul>
+          <p>
+            To assign a click event to all paragraphs on a page, you can do
+            this:
+          </p>
+          <div class="box">
+            <code class="highlight">$(&quot;p&quot;).click();</code>
+          </div>
+        </article>
+      </section>
+
+      <section class="main-section" id="effects">
+        <header>Effects</header>
+        <p>
+          The jQuery library provides several techniques for adding animation to
+          a web page. These include simple, standard animations that are
+          frequently used, and the ability to craft sophisticated custom
+          effects.
+        </p>
+        <article>
+          <section class="main-section" id="hide_&_show">
+            <header>Hide & Show</header>
+            <p>
+              With jQuery, you can hide and show HTML elements with the hide()
+              and show() methods:
+            </p>
+            <div class="box">
+              <code class="highlight">
+                $("#hide").click(function(){ $("p").hide(); });
+                <br />
+                $("#show").click(function(){ $("p").show(); });
+              </code>
+            </div>
+          </section>
+          <section class="main-section" id="fade">
+            <header>Fade</header>
+            <p>With jQuery you can fade an element in and out of visibility.</p>
+            <p>jQuery has the following fade methods:</p>
+            <ul>
+              <li>fadeIn()</li>
+              <li>fadeOut()</li>
+              <li>fadeToggle()</li>
+              <li>fadeTo()</li>
+            </ul>
+            <p>
+              The jQuery fadeIn() method is used to fade in a hidden element.
+            </p>
+            <p>
+              The optional speed parameter specifies the duration of the effect.
+              It can take the following values: "slow", "fast", or milliseconds.
+            </p>
+            <p>
+              The optional callback parameter is a function to be executed after
+              the fading completes.
+            </p>
+            <p>
+              The following example demonstrates the fadeIn() method with
+              different parameters:
+            </p>
+            <div class="box">
+              <code class="highlight"
+                >$("button").click(function(){ $("#div1").fadeIn(); <br />
+                $("#div2").fadeIn("slow"); <br />
+                $("#div3").fadeIn(3000); });</code
+              >
+            </div>
+          </section>
+          <section class="main-section" id="slide">
+            <header>Slide</header>
+            <p>The jQuery slide methods slide elements up and down.</p>
+            <p>With jQuery you can create a sliding effect on elements.</p>
+            <p>jQuery has the following slide methods:</p>
+            <ul>
+              <li>slideDown()</li>
+              <li>slideUp()</li>
+              <li>slideToggle()</li>
+            </ul>
+            <p>
+              The optional speed parameter specifies the duration of the effect.
+              It can take the following values: "slow", "fast", or milliseconds.
+            </p>
+            <p>
+              The optional callback parameter is a function to be executed after
+              the sliding completes.
+            </p>
+            <p>he following example demonstrates the slideDown() method:</p>
+            <div class="box">
+              <code class="highlight">
+                $("#flip").click(function(){ $("#panel").slideDown(); });
+              </code>
+            </div>
+          </section>
+          <section class="main-section" id="animate">
+            <header>Animate</header>
+            <p>With jQuery, you can create custom animations.</p>
+            <p>
+              The jQuery animate() method is used to create custom animations.
+            </p>
+            <p>
+              The required params parameter defines the CSS properties to be
+              animated.
+            </p>
+            <p>
+              The optional speed parameter specifies the duration of the effect.
+              It can take the following values: "slow", "fast", or milliseconds.
+            </p>
+            <p>
+              The optional callback parameter is a function to be executed after
+              the animation completes.
+            </p>
+            <p>
+              The following example demonstrates a simple use of the animate()
+              method; it moves a <span class="blue">&lt;div&gt;</span> element
+              to the right, until it has reached a left property of 250px:
+            </p>
+            <div class="box">
+              <code class="highlight"
+                >$("button").click(function(){ $("div").animate({left:
+                '250px'}); });
+              </code>
+            </div>
+          </section>
+          <section class="main-section" id="stop">
+            <header>Stop</header>
+            <p>
+              The jQuery stop() method is used to stop animations or effects
+              before it is finished.
+            </p>
+            <p>
+              The jQuery stop() method is used to stop an animation or effect
+              before it is finished.
+            </p>
+            <p>
+              The stop() method works for all jQuery effect functions, including
+              sliding, fading and custom animations.
+            </p>
+            <div class="box">
+              <code class="highlight"
+                >$("#stop").click(function(){ $("#panel").stop(); });</code
+              >
+            </div>
+          </section>
+          <section class="main-section" id="callback">
+            <header>Callback</header>
+            <p>
+              A callback function is executed after the current effect is 100%
+              finished.
+            </p>
+            <p>
+              JavaScript statements are executed line by line. However, with
+              effects, the next line of code can be run even though the effect
+              is not finished. This can create errors.
+            </p>
+            <p>
+              A callback function is executed after the current effect is
+              finished.
+            </p>
+            <div class="box">
+              <code class="highlight">
+                $("button").click(function(){ $("p").hide("slow", function(){
+                alert("The paragraph is now hidden"); }); });
+              </code>
+            </div>
+          </section>
+          <section class="main-section" id="chaining">
+            <header>Chaining</header>
+            <p>With jQuery, you can chain together actions/methods.</p>
+            <p>
+              Chaining allows us to run multiple jQuery methods (on the same
+              element) within a single statement.
+            </p>
+            <p>
+              To chain an action, you simply append the action to the previous
+              action.
+            </p>
+            <p>
+              The following example chains together the css(), slideUp(), and
+              slideDown() methods. The "p1" element first changes to red, then
+              it slides up, and then it slides down:
+            </p>
+            <div class="box">
+              <code class="highlight"
+                >$("#p1").css("color",
+                "red").slideUp(2000).slideDown(2000);</code
+              >
+            </div>
+          </section>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
